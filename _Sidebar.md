@@ -7,13 +7,13 @@
   * [Startup](Getting-Started#startup)
   * [Logstash Configuration](Getting-Started#logstash-configuration-optional)
 
-* [Configuration](https://github.com/lmco/streamflow/wiki/Configuration)
-  * [streamflow.yml Configuration]
-  * [Server Configuration]
-  * [Datastore Configuration]
-  * [Auth Configuration]
-  * [Logging Configuration]
-  * [Proxy Configuration]
+* [Configuration](Configuration)
+  * [Overview](Configuration#overview)
+  * [Server Configuration](Configuration#server-configuration)
+  * [Datastore Configuration](Configuration#datastore-configuration)
+  * [Auth Configuration](Configuration#auth-configuration)
+  * [Logging Configuration](Configuration#logging-configuration)
+  * [Proxy Configuration](Configuration#proxy-configuration)
 
 * [How It Works](https://github.com/lmco/streamflow/wiki/How-It-Works)
 
