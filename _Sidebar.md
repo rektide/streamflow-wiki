@@ -2,12 +2,18 @@
 
 * [Getting Started](Getting-Started)
   * [System Requirements](Getting-Started#system-requirements)
-  * [Compilation](Getting-Started#compilation)
+  * [Building the Project](Getting-Started#building-the-project)
   * [Installation](Getting-Started#installation)
   * [Startup](Getting-Started#startup)
   * [Logstash Configuration](Getting-Started#logstash-configuration-optional)
 
 * [Configuration](https://github.com/lmco/streamflow/wiki/Configuration)
+  * [streamflow.yml Configuration]
+  * [Server Configuration]
+  * [Datastore Configuration]
+  * [Auth Configuration]
+  * [Logging Configuration]
+  * [Proxy Configuration]
 
 * [How It Works](https://github.com/lmco/streamflow/wiki/How-It-Works)
 
