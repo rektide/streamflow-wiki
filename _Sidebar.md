@@ -16,22 +16,24 @@
   * [Proxy Configuration](Configuration#proxy-configuration)
 
 * [How It Works](How-It-Works)
-  * [Key Concepts](How-It-Works#key-concepts)
-  * [System Overview](How-It-Works#system-overview)
+  * [Important Terminology](How-It-Works#important-terminology)
+  * [System Architecture](How-It-Works#system-architecture)
   * [Key Technologies](How-It-Works#key-technologies)
 
 * [How To Use](How-To-Use)
   * [Overview](How-To-Use#overview)
 
-* [Framework Development](Framework-Development)
-  * [Overview](Framework-Development#overview)
+* [Frameworks](Frameworks)
+  * [Overview](Frameworks#overview)
 
 * [Datastores](Datastores)
+  * [Overview](Datastores#overview)
   * [JDBC Datastore](Datastores#jdbc-datastore)
   * [MongoDB Datastore](Datastores#mongodb-datastore)
   * [Building a Custom Datastore](Datastores#creating-a-custom-datastore)
 
 * [Authentication](Authentication)
+  * [Overview](Authentication#overview)
   * [Shiro Configuration](Authentication#shiro-configuration)
   * [Datastore Realm](Authentication#datastore-realm)
   * [Building a Custom Realm](Authentication#building-a-custom-realm)
