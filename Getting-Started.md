@@ -2,10 +2,10 @@ Follow the steps below to build a new StreamFlow distribution from source and in
 
 ## System Requirements
 
-## Building the code
+## Build the Code
 
-## Installation
+## Install the Server
 
-## Startup
+## Start the Server
 
-## Logstash Setup (optional)
+## Configure Logstash (optional)
