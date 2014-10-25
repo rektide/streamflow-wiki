@@ -1,6 +1,11 @@
-* [Home](https://github.com/lmco/streamflow/wiki)
+* [Home](Home)
 
-* [Getting Started](https://github.com/lmco/streamflow/wiki/Getting-Started)
+* [Getting Started](Getting-Started)
+  * [System Requirements](Getting-Started#system-requirements)
+  * [Compilation](Getting-Started#compilation)
+  * [Installation](Getting-Started#installation)
+  * [Startup](Getting-Started#startup)
+  * [Logstash Configuration](Getting-Started#logstash-configuration-optional)
 
 * [Configuration](https://github.com/lmco/streamflow/wiki/Configuration)
 
