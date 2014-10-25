@@ -33,8 +33,8 @@
   * [Frameworks]()
     * [Uploading a Framework]()
   * [Resources]()
-    * [Creating a Resource Entry]
-    * [Selecting a Resource Entry]
+    * [Creating a Resource]()
+    * [Selecting a Resource]()
   * [Accounts]()
     * [Creating a User]()
 
