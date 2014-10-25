@@ -1,4 +1,4 @@
-## Important Concepts & Terminology
+## Important Terminology
 
 ## System Architecture
 
