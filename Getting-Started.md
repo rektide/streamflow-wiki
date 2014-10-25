@@ -2,7 +2,7 @@ Follow the steps below to build a new StreamFlow distribution from source and in
 
 ## System Requirements
 
-## Compilation
+## Building the Project
 
 ## Installation
 
