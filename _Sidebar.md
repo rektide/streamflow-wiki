@@ -12,23 +12,34 @@
   * [Server Configuration](Configuration#server-configuration)
   * [Datastore Configuration](Configuration#datastore-configuration)
   * [Auth Configuration](Configuration#auth-configuration)
-  * [Logging Configuration](Configuration#logging-configuration)
+  * [Logger Configuration](Configuration#logger-configuration)
   * [Proxy Configuration](Configuration#proxy-configuration)
 
-* [How It Works](https://github.com/lmco/streamflow/wiki/How-It-Works)
+* [How It Works](How-It-Works)
+  * [Key Concepts](How-It-Works#key-concepts)
+  * [System Overview](How-It-Works#system-overview)
+  * [Key Technologies](How-It-Works#key-technologies)
 
-* [How To Use](https://github.com/lmco/streamflow/wiki/How-To-Use)
+* [How To Use](How-To-Use)
+  * [Overview](How-To-Use#overview)
 
-* [Framework Development](https://github.com/lmco/streamflow/wiki/Framework-Development)
+* [Framework Development](Framework-Development)
+  * [Overview](Framework-Development#overview)
 
-* [Datastores](https://github.com/lmco/streamflow/wiki/Datastores)
+* [Datastores](Datastores)
+  * [JDBC Datastore](Datastores#jdbc-datastore)
+  * [MongoDB Datastore](Datastores#mongodb-datastore)
+  * [Building a Custom Datastore](Datastores#creating-a-custom-datastore)
 
-* [Authentication](https://github.com/lmco/streamflow/wiki/Authentication)
+* [Authentication](Authentication)
+  * [Shiro Configuration](Authentication#shiro-configuration)
+  * [Datastore Realm](Authentication#datastore-realm)
+  * [Building a Custom Realm](Authentication#building-a-custom-realm)
 
-* [Troubleshooting](https://github.com/lmco/streamflow/wiki/Troubleshooting)
+* [Troubleshooting](Troubleshooting)
 
-* [FAQ](https://github.com/lmco/streamflow/wiki/FAQ)
+* [FAQ](FAQ)
 
-* [Contributing](https://github.com/lmco/streamflow/wiki/Contributing)
+* [Contributing](Contributing)
 
-* [Road Map](https://github.com/lmco/streamflow/wiki/Road-Map)
+* [Road Map](Road-Map)
