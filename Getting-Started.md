@@ -25,11 +25,11 @@ If you wish to manually build StreamFlow from source download or clone a copy of
 
 StreamFlow is built using [Maven 3]() and is required when building the distribution from source.  Please ensure that Maven is properly installed and configured before attempting to build StreamFlow.  To build StreamFlow please execute the following commands:
 
-Build distribution with unit AND integration tests:
+**Build distribution with unit AND integration tests:**
 
     mvn clean install
 
-Build distribution with unit tests only:
+**Build distribution with unit tests only:**
 
     mvn clean package
 
@@ -42,7 +42,7 @@ This section covers the process to install a new distribution of StreamFlow on y
 
 If you have not done so already, please download a pre-built StreamFlow distribution or build your own using the above steps.  Once you have your distribution ready, copy it to a directory of your choosing.  The examples below assume you will be installing StreamFlow to `/opt/streamflow-{VERSION}`
 
-Note: In the following examples replace `{VERSION}` with the StreamFlow distribution version (e.g. 0.8.0)
+> **Note:** In the following examples replace `{VERSION}` with the StreamFlow distribution version (e.g. 0.8.0)
 
 #### For *nix Systems
 
@@ -50,7 +50,7 @@ Note: In the following examples replace `{VERSION}` with the StreamFlow distribu
     cd /opt
     tar -xvzf streamflow-{VERSION}.tar.gz
 
-(Optional) If your system supports chkconfig also execute the following steps to start StreamFlow automatically on system reboot:
+> (Optional) If your system supports chkconfig also execute the following steps to start StreamFlow automatically on system reboot:
 
     ln -s /opt/streamflow-{VERSION}/bin/init.d/streamflow /etc/init.d/streamflow
     chkconfig --add streamflow
@@ -68,37 +68,37 @@ Thats it!  You are now ready to startup StreamFlow and get started building your
 
 StreamFlow comes packaged with Bash scripts (`streamflow.sh`) for *nix systems and Batch scripts (`streamflow.bat`) for Windows to make starting StreamFlow easy on any environment.  If you are running on a `chkconfig` supported system such as Red Hat Enterprise Linux, CentOS, or Fedora, StreamFlow also provides an init.d script for automatic startup of the server on reboot.  Execute the following commands to startup StreamFlow
 
-Note: If you installed StreamFlow to a location other than `/opt/streamflow-0.8.0` replace the path with the path to your StreamFlow installation.
+> **Note:** If you installed StreamFlow to a location other than `/opt/streamflow-0.8.0` replace the path with the path to your StreamFlow installation.
 
 ### For *nix Systems (using bash script)
 
-To start the server:
+**To start the server:**
 
     cd /opt/streamflow-0.8.0
     ./bin/streamflow.sh 
 
-To stop the server:
+**To stop the server:**
 
     Ctrl-C
 
 ### For Linux Systems (using chkconfig)
 
-To start the server:
+**To start the server:**
 
     service streamflow start
 
-To stop the server:
+**To stop the server:**
 
     service streamflow stop
 
 ### For Windows Systems 
 
-To start the server:
+**To start the server:**
 
     cd /opt/streamflow-0.8.0
     ./bin/streamflow.bat
 
-To stop the server:
+**To stop the server:**
 
     Ctrl-C
 
@@ -107,7 +107,7 @@ To stop the server:
 
 The StreamFlow distribution when unpacked contains some directories which store user data and configuration.  When upgrading to a new StreamFlow distribution, it is important to make backups of these directories/files.  The following directories contain user data and should be copied from the original distribution and pasted into the corresponding directory of the new distribution.
 
-Note: `${STREAMFLOW_HOME}` represents the path to your StreamFlow installation
+> **Note:** `${STREAMFLOW_HOME}` represents the path to your StreamFlow installation
 
 * `${STREAMFLOW_HOME}/data` - Contains all user content such as topologies and frameworks
 * `${STREAMFLOW_HOME}/conf` - Contains `streamflow.yml` configuration settings for the server
