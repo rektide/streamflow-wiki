@@ -18,7 +18,7 @@ Note: In the following examples replace `{VERSION}` with the StreamFlow distribu
     cd /opt
     tar -xvzf streamflow-{VERSION}.tar.gz
 
-If your system supports chkconfig also execute the following steps to start StreamFlow automatically on system reboot:
+(Optional) If your system supports chkconfig also execute the following steps to start StreamFlow automatically on system reboot:
 
     ln -s /opt/streamflow-{VERSION}/bin/init.d/streamflow /etc/init.d/streamflow
     chkconfig --add streamflow
@@ -62,7 +62,7 @@ To stop the server:
 
 To start the server:
 
-    cd {STREAMFLOW_HOME}
+    cd /opt/streamflow-0.8.0
     ./bin/streamflow.bat
 
 To stop the server:
@@ -70,5 +70,14 @@ To stop the server:
     Ctrl-C
 
 ## Upgrades
+
+The StreamFlow distribution when unpacked contains some directories which store user data and configuration.  When upgrading to a new StreamFlow distribution, it is important to make backups of these directories/files.  The following directories contain user data and should be copied from the original distribution and pasted into the corresponding directory of the new distribution.
+
+Note: `${STREAMFLOW_HOME}` represents the path to your StreamFlow installation
+
+* `${STREAMFLOW_HOME}/data` - Contains all user content such as topologies and frameworks
+* `${STREAMFLOW_HOME}/conf` - Contains `streamflow.yml` configuration settings for the server
+
+When upgrading your `streamflow.yml` always remember to check the upgrade notes to see if any configuration properties have been added or deprecated.  Please adjust your streamflow.yml as necessary to remain valid with new distributions.
 
 ## Logstash Configuration (optional)
