@@ -66,7 +66,7 @@ Thats it!  You are now ready to startup StreamFlow and get started building your
 
 ## Startup
 
-StreamFlow comes packaged with Bash scripts (`streamflow.sh`) for *nix systems and Batch scripts (`streamflow.bat`) for Windows to make starting StreamFlow easy on any environment.  If you are running on a `chkconfig` supported system such as Red Hat Enterprise Linux, CentOS, or Fedora, StreamFlow also provides an init.d script for automatic startup of the server on reboot.  Execute the following commands to startup StreamFlow
+StreamFlow comes packaged with Bash scripts (`streamflow.sh`) for *nix systems and Batch scripts (`streamflow.bat`) for Windows to make starting StreamFlow easy on any environment.  If you are running on a `chkconfig` supported system such as Red Hat Enterprise Linux, CentOS, or Fedora, StreamFlow also provides an init.d script for automatic startup of the server on reboot.  Execute the following commands to startup StreamFlow:
 
 > **Note:** If you installed StreamFlow to a location other than `/opt/streamflow-0.8.0` replace the path with the path to your StreamFlow installation.
 
@@ -102,6 +102,9 @@ StreamFlow comes packaged with Bash scripts (`streamflow.sh`) for *nix systems a
 
     Ctrl-C
 
+When started, the StreamFlow server uses the `streamflow.yml` YAML file located at `${STREAMFLOW_HOME}/conf/streamflow.yml` to configure the application.  This file contains information such as `server.port` which defines which port the StreamFlow HTTP server is bound to.  
+
+> **Warning:** If you experience any binding errors on startup, change the `server.port` property in the `streamflow.yml` file to use an alternative free port.
 
 ## Upgrades
 
