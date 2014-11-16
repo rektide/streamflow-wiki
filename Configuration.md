@@ -69,7 +69,7 @@ The `proxy` configuration section is used to configure HTTP proxy settings if re
 
 ## Auth Configuration
 
-The `auth` configuration is used to configure HTTP authentication/authorization via [Apache Shiro](http://shiro.apache.org/).  Enabling this setting will protect all web resources  with a username and password.  If you would like to customize the Shiro authentication mechanism please consult the [Auth Custom]() section.
+The `auth` configuration is used to configure HTTP authentication/authorization via [Apache Shiro](http://shiro.apache.org/).  Enabling this setting will protect all web resources  with a username and password.  If you would like to customize the Shiro authentication mechanism please consult the ["Building a Custom Realm"](Authentication#building-a-custom-realm) section.
 
 > **Warning:** Before enabling authentication, browse to the StreamFlow UI accounts page `http://{STREAMFLOW_SERVER}:{STREAMFLOW_PORT}/#/users` and create some users while authentication is disabled.
 
