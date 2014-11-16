@@ -49,7 +49,7 @@ The sample `streamflow.yml` configuration below outlines the default configurati
 
 The `server` configuration section is used to configure HTTP server settings.
 
-#### `server.port`
+##### `server.port`
 - **Description:** HTTP port to bind the StreamFlow server to.  This setting will determine where you need to point your browser to access the StreamFlow UI and REST services. 
 - **Default:** 8080
 
@@ -58,31 +58,31 @@ The `server` configuration section is used to configure HTTP server settings.
 
 The `proxy` configuration section is used to configure HTTP proxy settings if required in your environment
 
-#### `proxy.host`
-- **Description:** HTTP proxy host for your environment 
+##### `proxy.host`
+- **Description:** (Optional) HTTP proxy host for your environment 
 - **Default:** *None*
 
-#### `proxy.port`
-- **Description:** HTTP proxy port for your environment 
+##### `proxy.port`
+- **Description:** (Optional) HTTP proxy port for your environment 
 - **Default:** *None*
 
 
 ## Auth Configuration
 
-The `auth` configuration is used to configure HTTP authentication/authorization.  Enabling this setting will protect all web resources  with a username and password.
+The `auth` configuration is used to configure HTTP authentication/authorization via [Apache Shiro](http://shiro.apache.org/).  Enabling this setting will protect all web resources  with a username and password.  If you would like to customize the Shiro authentication mechanism please consult the [Auth Custom]() section.
 
 > **Warning:** Before enabling authentication, browse to the StreamFlow UI accounts page `http://{STREAMFLOW_SERVER}:{STREAMFLOW_PORT}/#/users` and create some users while authentication is disabled.
 
-#### `auth.enabled`
+##### `auth.enabled`
 - **Description:** "true" if authentication is enabled, "false" otherwise. 
 - **Default:** false
 
-#### `auth.realmClass`
-- **Description:** Specifies the fully qualified class name of the Shiro authorizing realm.  This property should be changed in conjunction with the `auth.moduleClass` property to fit your configuration.  This should only be changed if you plan to change the default Shiro authentication to use another method such as LDAP.
+##### `auth.realmClass`
+- **Description:** (Optional) Specifies the fully qualified class name of the Shiro authorizing realm.  This property should be changed in conjunction with the `auth.moduleClass` property to fit your configuration.  This should only be changed if you plan to change the default Shiro authentication to use another method such as LDAP.
 - **Default:** streamflow.server.security.DatastoreRealm
 
-#### `auth.moduleClass`
-- **Description:** Specifies the fully qualified class name of the Guice module that supports injection of your `auth.realmClass`.  This property should be changed in conjunction with the `auth.realmClass` property to fit your configuration.  This should only be changed if you plan to change the default Shiro authentication to use another method such as LDAP.
+##### `auth.moduleClass`
+- **Description:** (Optional) Specifies the fully qualified class name of the Guice module that supports injection of your `auth.realmClass`.  This property should be changed in conjunction with the `auth.realmClass` property to fit your configuration.  This should only be changed if you plan to change the default Shiro authentication to use another method such as LDAP.
 - **Default:** streamflow.server.security.DatastoreRealmModule
 
 
