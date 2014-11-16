@@ -32,7 +32,7 @@ The sample `streamflow.yml` configuration below outlines the default configurati
 		
     # Datastore configuration
     datastore:
-        moduleClass: jetstream.datastore.mongodb.config.MongoDatastoreModule
+        moduleClass: streamflow.datastore.jdbc.config.JDBCDatastoreModule
         # Datastore specific properties included here ...
 
     # Cluster Configuration
@@ -56,7 +56,7 @@ The `server` configuration section is used to configure HTTP server settings.
 
 ## Proxy Configuration
 
-The `proxy` configuration section is used to configure HTTP proxy settings if required in your environment
+The `proxy` configuration section is used to configure HTTP proxy settings if required in your environment.  The HTTP proxy settings are made available to Spouts and Bolts via injection if needed.
 
 ##### `proxy.host`
 - **Description:** (Optional) HTTP proxy host for your environment 
@@ -92,6 +92,27 @@ The `datastore` configuration is used to configure the active [Datastore](Datast
 
 > **Note:** Each Datastore implementation allows for custom properties which affect its behavior.  Consult the documentation for each Datastore to see which configuration properties can be specified.
 
+##### `datastore.moduleClass`
+- **Description:** Specifies the fully qualified class name of the Guice module supporting the Datastore implementation.  The datastore configuration can accept additional properties to support the implmentation. 
+- **Default:** streamflow.datastore.jdbc.config.JDBCDatastoreModule
+
+> The following settings are specific to the default JDBC Datastore which utilizes an embedded H2 database.  If you would like to use a standalone database, override these settings to match your database.
+
+##### `datastore.url`
+- **Description:** JDBC URL of the target database 
+- **Default:** jdbc:h2:${STREAMFLOW_HOME}/data/h2/streamflow
+
+##### `datastore.driver`
+- **Description:** JDBC driver for the target database 
+- **Default:** org.h2.Driver
+
+##### `datastore.user`
+- **Description:** JDBC username for the target database 
+- **Default:** streamflow
+
+##### `datastore.password`
+- **Description:** JDBC password for the target database 
+- **Default:** streamflow
 
 
 ## Logger Configuration
