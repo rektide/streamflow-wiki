@@ -130,8 +130,16 @@ Open the `pom.xml` file in your text editor so it looks similar to the following
 
 When implementing your Spouts and Bolts, don't forget to add any required dependencies to this `pom.xml` and use the default `compile` scope for those dependencies.
 
+Now that you have modified the project configuration, you can rebuild the project at any time by executing the following command:
+
+    mvn clean install
+
+Once the command completes you can find your StreamFlow Framework JAR in the `target` directory of your project.
+
 
 ##Framework Configuration
+
+In the previous section we set up the Maven project so it was capable of compiling the final Framework JAR.  
 
 ##Component Implementation
 
