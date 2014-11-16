@@ -7,7 +7,7 @@ StreamFlow uses sensible configuration defaults to allow you to run the server w
 Configuration settings for StreamFlow are made through a
 [YAML](http://www.yaml.org/spec/1.2/spec.html) configuration file located at `${STREAMFLOW_HOME}/conf/streamflow.yml`.
 
-The sample `streamflow.yml` configuration below outlines the default configuration for StreamFlow.  For detailed information on each setting please consult the following sections.
+The sample `streamflow.yml` configuration below outlines the default configuration for StreamFlow.  For detailed information on each setting please consult the associated section.
 
     # Server Configuration
     server:
@@ -87,6 +87,11 @@ The `auth` configuration is used to configure HTTP authentication/authorization 
 
 
 ## Datastore Configuration
+
+The `datastore` configuration is used to configure the active [Datastore](Datastores) implementation.  Datastores control how entities such as Topologies, Frameworks, and Users are persisted for StreamFlow.  StreamFlow comes built in with a [JDBC Datastore](Datastores#jdbc-datastore) and [MongoDB Datastore](Datastores#mongodb-datastore) implementation.  Although the JDBC datastore is recommended for simple installations, please select whichever Datastore implementation best fits your needs.  For detailed information on Datastores and the implementations please see [Datastores](Datastores).
+
+> **Note:** Each Datastore implementation allows for custom properties which affect its behavior.  Consult the documentation for each Datastore to see which configuration properties can be specified.
+
 
 
 ## Logger Configuration
