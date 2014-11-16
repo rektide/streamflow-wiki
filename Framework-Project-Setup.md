@@ -1,4 +1,4 @@
-## Overview
+### Overview
 
 StreamFlow frameworks are compiled as a single JAR file which contains all of your Storm component implementations and the `framework.yml` configuration file.  
 
@@ -6,7 +6,7 @@ In order for a framework jar to be compatible with Storm, it is necessary to inc
 
 This section will outline the process to build a StreamFlow framework Maven project from scratch.  Before continuing please verify that Maven is correctly installed on your development workstation.
 
-## Framework Project Directory Structure
+### Framework Project Directory Structure
 
 Before we start coding, it is worthwhile to discuss the overall project layout we will be setting up.  Below is the overall structure of a typical StreamFlow framework Maven project:
 
@@ -35,7 +35,7 @@ With this target project structure in mind, let's start by using Maven's archety
 
 > **Note:** If you would prefer to build the directory structure manually or use an existing project feel free to do so.  The archetype is simply used to help build the base project structure for those building their project from scratch.
 
-## Generating a Framework Project
+### Generating a Framework Project
 
 Open up a new command line prompt and execute the following command.  
 
@@ -49,7 +49,7 @@ Open up a new command line prompt and execute the following command.
 
 If successful, you will find the your new Maven project folder in your current directory using the `{project-name}` you provided in the command.  While the Maven archetype does a good job of creating the base project structure, there are a few changes we will need to make to ensure the project is a valid StreamFlow framework.
 
-## Updating the Project Configuration
+### Updating the Project Configuration
 
 First, lets modify the `pom.xml` project configuration to add the Storm dependency and Shade plugin.  The Storm dependency will allow us to properly compile Storm components and the Shade plugin will ensure that all non `provided` dependencies are compiled into our final JAR file.
 
@@ -126,7 +126,7 @@ Open the `pom.xml` file in your text editor so it looks similar to the following
 When implementing your Spouts and Bolts, don't forget to add any required dependencies to this `pom.xml` and use the default `compile` scope for those dependencies.
 
 
-## Building the Project
+### Building the Project
 
 Now that you have modified the project configuration, you can rebuild the project at any time by executing the following command from within the root folder of your framework project:
 
