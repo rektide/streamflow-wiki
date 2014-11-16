@@ -81,3 +81,5 @@ Note: `${STREAMFLOW_HOME}` represents the path to your StreamFlow installation
 When upgrading your `streamflow.yml` always remember to check the upgrade notes to see if any configuration properties have been added or deprecated.  Please adjust your streamflow.yml as necessary to remain valid with new distributions.
 
 ## Logstash Configuration (optional)
+
+Coming soon...
