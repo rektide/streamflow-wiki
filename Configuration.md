@@ -23,17 +23,22 @@ The sample `streamflow.yml` configuration below outlines the default configurati
         enabled: false
         realmClass: streamflow.server.security.DatastoreRealm
         moduleClass: streamflow.server.security.DatastoreRealmModule
+		
+    # Datastore configuration
+    datastore:
+        moduleClass: streamflow.datastore.jdbc.config.JDBCDatastoreModule
+
+        # JDBC Datastore specific properties
+        url: jdbc:h2:${STREAMFLOW_HOME}/data/h2/streamflow
+        driver: org.h2.Driver
+        user: streamflow
+        password: streamflow
 
     # Logging Configuration
     logger:
         level: INFO
         baseDir: /var/log/storm
         formatPattern: "%d{ISO8601,GMT} %p %X{topology} %X{component} %c - %m%n"
-		
-    # Datastore configuration
-    datastore:
-        moduleClass: streamflow.datastore.jdbc.config.JDBCDatastoreModule
-        # Datastore specific properties included here ...
 
     # Cluster Configuration
     clusters:
@@ -117,5 +122,49 @@ The `datastore` configuration is used to configure the active [Datastore](Datast
 
 ## Logger Configuration
 
+The logging configuration is used to configure the location and configuration for topology log files.  This information is used for local and cluster submissions to publish topology log data and should be configured to fit the cluster environment.
+
+Note: Changes made in this section should also be reflected in the Logstash agent configurations if Logstash is being used.
+
+##### `logger.level`
+- **Description:** Logging level to use when outputting data
+- **Default:** INFO
+
+##### `logger.baseDir`
+- **Description:** Base directory to publish log data to.  This directory must already exist on the server and have write permission by the StreamFlow server 
+- **Default:** /var/log/storm
+
+##### `logger.formatPattern`
+- **Description:** SLF4J log pattern to use when outputting topology log data 
+- **Default:** "%d{ISO8601,GMT} %p %X{topology} %X{component} %c - %m%n"
+
 
 ## Clusters Configuration
+
+The `clusters` configuration allows users to register Storm clusters with StreamFlow.  StreamFlow is designed to work with multiple Storm clusters which are selected when submitting topologies.  Add as many Storm clusters as you have available to in the `clusters` section.
+
+> Note: Regardless of the configuration, the embedded "Local" cluster is always available for testing.  This cluster allows users to submit and test topologies without requiring a full cluster to be available.  This takes advantage of Storm's LocalCluster capability which does not require a Storm installation.
+
+##### `clusters.id`
+- **Description:** Unique id to assign to this cluster
+- **Default:** *None*
+
+##### `clusters.displayName`
+- **Description:** User friendly name that will appear when selecting a cluster
+- **Default:** *None*
+
+##### `clusters.nimbusHost`
+- **Description:** Hostname of the nimbus machine for the Storm cluster
+- **Default:** localhost
+
+##### `clusters.nimbusPort`
+- **Description:** Thrift port of the nimbus machine for the Storm cluster
+- **Default:** 6627
+
+##### `clusters.nimbusHost`
+- **Description:** (Optional) Hostname of the Logstash Elasticsearch server
+- **Default:** localhost
+
+##### `clusters.nimbusPort`
+- **Description:** (Optional) HTTP port of the Logstash Elasticsearch server
+- **Default:** 9200
