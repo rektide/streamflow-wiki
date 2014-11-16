@@ -11,7 +11,7 @@ The following sections will help you get started building your first StreamFlow 
 
 ##Project Setup
 
-StreamFlow frameworks are compiled as single JAR files which contain all of your Spout component implementations and the `framework.yml` configuration file.  
+StreamFlow frameworks are compiled as a single JAR file which contains all of your Storm component implementations and the `framework.yml` configuration file.  
 
 In order for a framework jar to be compatible with Storm, it is necessary to include additional goals in your maven pom.xml to ensure that all transient dependent libraries are compiled into the jar.  This requirement allows Storm topologies to be completely self-contained when executing on remote clusters.  The Maven Shade plugin is used to accomplish this task which includes all dependent libraries in the framework jar during packaging.  In general, any dependencies in your pom which are not `provided` will be compiled into your framework jar file.  Due to this behavior, it is important to list the storm dependency as a `provided` dependency to avoid compiling the Storm libraries in your framework.  All other dependencies should use the default scope of `compile` to ensure that those dependencies are included to prevent Class not found exceptions during runtime. 
 
@@ -46,7 +46,7 @@ With this target project structure in mind, let's start by using Maven's archety
 
 Open up a new command line prompt and execute the following command.  
 
-Replace `{project-package}` with the groupId you would like to use for the new project.  Maven will also use this to generate the default package structure for your project.  Replace `{project-name}` with the artifactId you would would like to use for your project.  Finally, replace `{project-version}` with the version you would like to use for your project.
+> **Note:** Replace `{project-package}` with the groupId you would like to use for the new project.  Maven will also use this to generate the default package structure for your project.  Replace `{project-name}` with the artifactId you would would like to use for your project.  Finally, replace `{project-version}` with the version you would like to use for your project.
 
     mvn archetype:generate -DgroupId={project-package} \
        -DartifactId={project-name} \
@@ -130,7 +130,7 @@ Open the `pom.xml` file in your text editor so it looks similar to the following
 
 When implementing your Spouts and Bolts, don't forget to add any required dependencies to this `pom.xml` and use the default `compile` scope for those dependencies.
 
-Now that you have modified the project configuration, you can rebuild the project at any time by executing the following command:
+Now that you have modified the project configuration, you can rebuild the project at any time by executing the following command from within the root folder of your framework project:
 
     mvn clean install
 
@@ -139,7 +139,16 @@ Once the command completes you can find your StreamFlow Framework JAR in the `ta
 
 ##Framework Configuration
 
-In the previous section we set up the Maven project so it was capable of compiling the final Framework JAR.  
+In the previous section you set up a Maven project capable of compiling a StreamFlow Framework JAR.  In order to identify the Spouts and Bolts that are available in your Framework JAR, StreamFlow utilizes a single Framework configuration file.  The framework configuration is integral to building Components that can be used within the StreamFlow UI to dynamically build topologies.  Although the project you created in the last section will compile, the lack of a `framework.yml` configuration file will prevent StreamFlow from registering any Spouts or Bolts within your JAR.  It is important to note that only Spout and Bolt implementations that have been registered in the `framework.yml` file will be visible by the StreamFlow UI.
+
+The framework configuration file is used to register all of the Spouts, Bolts, Resources, and Serializations that are present within the framework jar project.  This configuration can be defined using a YAML format or a JSON format.  Selection of the configuration format (YAML/JSON) is solely a personal preference as all settings are available in each format.  Although either format can be used, YAML is the recommended format as it is less verbose than JSON in regards to formatting.  
+
+The `framework.yml` and `framework.json` configuration files should be located in a `STREAMFLOW-INF` folder at the root of the class path (e.g. `src/main/resources/STREAMFLOW-INF/framework.yml` or `src/main/resources/STREAMFLOW-INF/framework.json`).  The following sample `framework.yml` and `framework.json` files showcase the property and interface configuration for a component.  Please note that the following YAML and JSON configurations are equivalent and you that you only need to define either `framework.yml` OR `framework.json` in your project.
+
+##### Sample framework.yml configuration
+
+##### Sample framework.json configuration
+
 
 ##Component Implementation
 
