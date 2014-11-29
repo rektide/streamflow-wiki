@@ -40,9 +40,9 @@
 
 * [Datastores](Datastores)
   * [Overview](Datastores#overview)
-  * [JDBC Datastore](Datastores#jdbc-datastore)
+  * [JDBC Datastore](Datastores#jdbc-datastore-default)
   * [MongoDB Datastore](Datastores#mongodb-datastore)
-  * [Building a Custom Datastore](Datastores#creating-a-custom-datastore)
+  * [Building a Custom Datastore](Datastores#building-a-custom-datastore)
 
 * [Authentication](Authentication)
   * [Overview](Authentication#overview)
