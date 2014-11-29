@@ -1,6 +1,6 @@
 ## Overview
 
-## Shiro
+## Shiro Configuration
 
 ## Datastore Realm
 
