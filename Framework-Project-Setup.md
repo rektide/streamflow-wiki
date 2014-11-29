@@ -2,7 +2,7 @@
 
 StreamFlow frameworks are compiled as a single JAR file which contains all of your Storm component implementations and the `framework.yml` configuration file.  
 
-In order for a framework jar to be compatible with Storm, it is necessary to include additional goals in your maven pom.xml to ensure that all transient dependent libraries are compiled into the jar.  This requirement allows Storm topologies to be completely self-contained when executing on remote clusters.  The Maven Shade plugin is used to accomplish this task which includes all dependent libraries in the framework jar during packaging.  In general, any dependencies in your pom which are not `provided` will be compiled into your framework jar file.  Due to this behavior, it is important to list the storm dependency as a `provided` dependency to avoid compiling the Storm libraries in your framework.  All other dependencies should use the default scope of `compile` to ensure that those dependencies are included to prevent Class not found exceptions during runtime. 
+In order for a framework jar to be compatible with Storm, it is necessary to include additional goals in your maven pom.xml to ensure that all transient dependent libraries are compiled into the jar.  This requirement allows Storm topologies to be completely self-contained when executing on remote clusters.  The Maven Shade plugin is used to accomplish this task which includes all dependent libraries in the framework jar during packaging.  In general, any dependencies in your pom which are not `provided` will be compiled into your framework jar file.  Due to this behavior, it is important to list the storm dependency as a `provided` dependency to avoid compiling the Storm libraries in your framework.  All other dependencies should use the default scope of `compile` to ensure that those dependencies are included to prevent Class not found exceptions at runtime. 
 
 This section will outline the process to build a StreamFlow framework Maven project from scratch.  Before continuing please verify that Maven is correctly installed on your development workstation.
 
@@ -132,4 +132,6 @@ Now that you have modified the project configuration, you can rebuild the projec
 
     mvn clean install
 
-Once the command completes you can find your StreamFlow Framework JAR in the `target` directory of your project.
+Once the command completes you can find your StreamFlow Framework JAR in the `target` directory of your project.  
+
+At this point you should have a properly configured project.  Please continue to the [Framework Configuration](Framework-Configuration) section to learn how to configure your `framework.yml` file to expose Spouts, Bolts, Resources, and Serializations.
