@@ -30,7 +30,7 @@
 
 * [Developing Frameworks](Developing-Frameworks)
   * [Overview](Developing-Frameworks#overview)
-  * [Project Setup](Framework-Project-Seup)
+  * [Project Setup](Framework-Project-Setup)
   * [Framework Configuration](Framework-Configuration)
   * [Component Implementation](Component-Implementation)
   * [Resource Implementation](Resource-Implementation)
