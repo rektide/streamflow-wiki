@@ -72,7 +72,7 @@ StreamFlow comes packaged with Bash scripts (`streamflow.sh`) for *nix systems a
 
 > **Note:** If you installed StreamFlow to a location other than `/opt/streamflow-0.8.0` replace the path with the path to your StreamFlow installation.
 
-### For *nix Systems (using bash script)
+#### For *nix Systems (using bash script)
 
 **To start the server:**
 
@@ -83,7 +83,7 @@ StreamFlow comes packaged with Bash scripts (`streamflow.sh`) for *nix systems a
 
     Ctrl-C
 
-### For Linux Systems (using chkconfig)
+#### For Linux Systems (using chkconfig)
 
 **To start the server:**
 
@@ -93,7 +93,7 @@ StreamFlow comes packaged with Bash scripts (`streamflow.sh`) for *nix systems a
 
     service streamflow stop
 
-### For Windows Systems 
+#### For Windows Systems 
 
 **To start the server:**
 
