@@ -1,4 +1,4 @@
-### Overview
+## Overview
 
 Frameworks contain all of the business logic for StreamFlow.  A StreamFlow Framework is simply a JAR file which contains a framework configuration file and implementations of Storm Spouts and Bolts.  The framework configuration (`framework.yml`) is a simple YAML file which registers each Spout and Bolt and any properties that associated with them.  The StreamFlow UI utilizes these registered Spouts and Bolts to allow users to dynamically create new topologies in a drag and drop interface.
 
@@ -8,19 +8,19 @@ While your code does not need to import custom Storm libraries, your Spouts and 
 
 The following sections will help you get started building your first StreamFlow framework and explain in detail all of the options available to you.  Follow the various links below to learn more about configuring and implementing your own StreamFlow Framework.
 
-### Project Setup
+## Project Setup
 See [Framework Project Setup]() to learn how to generate and configure your Framework project.
 
-### Framework Configuration
+## Framework Configuration
 See [Framework Configuration]() to learn how to register Spouts, Bolts, Resources, and Serializations within your Framework project.
 
-### Component Implementation
+## Component Implementation
 See 
 
-### Resource Implementation
+## Resource Implementation
 
-### Serialization Implementation
+## Serialization Implementation
 
-### Framework Logging
+## Framework Logging
 
-### Framework Metrics
+## Framework Metrics
