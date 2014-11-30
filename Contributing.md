@@ -11,7 +11,7 @@ In compliance with the GitFlow model, we have a master branch, a develop branch,
 
 The `master` branch should **NEVER** be committed to directly and should only receive updates during the release process.  The `master` branch is expected to be stable and contains the newest features that have been merged in.  
 
-The `develop` branch is assumed to be stable and contains all of the newest features which have been merged back into develp.  The develop branch should **NEVER** be committed to directly and should only receive updates from merged feature branches.
+The `develop` branch is assumed to be stable and contains all of the newest features which have been merged back into develp.  The `develop` branch should **NEVER** be committed to directly and should only receive updates from merged feature branches.
 
 When you are ready to submit some code fixes or features, please create a `feature` branch which should be forked from `develop`.  The instructions in the following section will walk through the process to create a new feature branch using the [jgitflow]() Maven plugin.
 
