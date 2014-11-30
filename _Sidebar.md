@@ -1,6 +1,6 @@
 * [Home](Home)
 * [Getting Started](Getting-Started)
-* [Installation](Getting-Started#Installation)
+* [Installation](Getting-Started#installation)
 * [Configuration](Configuration)
 * [How It Works](How-It-Works)
 * [How To Use](How-To-Use)
