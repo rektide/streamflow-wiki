@@ -32,9 +32,9 @@ Hotfix branches are branches used to prepare for a new release which fixes any b
 
 
 ## Using the JGit-Flow Plugin to Create Branches
-The Atlassian JGit-Flow Maven plugin simplifies the process of creating feature, release, and hotfix branches.  While the Maven plugin can also be used to complete features, releases, and hotfix branches, please use the pull request system when merging branches. 
+The [Atlassian JGit-Flow Maven plugin](https://bitbucket.org/atlassian/jgit-flow) simplifies the process of creating feature, release, and hotfix branches.  While the Maven plugin can also be used to complete features, releases, and hotfix branches, please use the pull request system when merging branches. 
 
-> **Note:** Use of the Maven plugin is not required and if you prefer to using traditional Git commands to create your feature branches, please feel free to do so.  Just make sure you keep to the naming conventions referenced in the above Branching Model section. 
+> **Note:** Use of the Maven plugin is not required and if you prefer to using traditional Git commands to create your feature branches, please feel free to do so.  Just make sure you follow the naming conventions referenced in the above Branching Model section. 
 
 If you would like to use the Maven plugin, execute the following commands from within the root folder of the StreamFlow source code.  Each command will prompt you for the name of your feature, release, or hotfix branch so enter the desired name for your branch when prompted.
 
