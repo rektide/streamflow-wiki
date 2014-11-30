@@ -57,4 +57,4 @@ When submitting new source code to the StreamFlow project please use the followi
 
 ##### Tabs and Indent
 * Convert tabs to **4** spaces
-* Max code width: 100 characters
+* **100** characters maximum code width
