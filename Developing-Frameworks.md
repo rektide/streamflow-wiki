@@ -15,12 +15,16 @@ See [Framework Project Setup](Framework-Project-Setup) to learn how to generate 
 See [Framework Configuration](Framework-Configuration) to learn how to register Spouts, Bolts, Resources, and Serializations within your Framework project.
 
 ## Component Implementation
-See [Component Implmentation](Component-Implementation) to learn how 
+See [Component Implementation](Component-Implementation) to learn how to modify your Spouts and Bolts to take advantage of StreamFlow specific features.
 
 ## Resource Implementation
+See [Resource Implementation](Resource-Implementation) to learn how to build Resources to simplify your configuration and reuse commonly used logic.
 
 ## Serialization Implementation
+See [Serialization-Implementation](Serialization-Implementation) to learn how to register your Kryo serializations so they can be loaded by Storm at runtime.
 
 ## Framework Logging
+See [Framework Logging](Framework-Logging) to learn how to configure and use the StreamFlow SLF4J logger in your Spouts and Bolts.
 
 ## Framework Metrics
+See [Framework Metrics](Framework-Metrics) to learn how to report and view metrics using Yammer metrics in your Spouts and Bolts.
