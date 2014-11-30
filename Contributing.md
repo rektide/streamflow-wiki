@@ -1,5 +1,5 @@
 ## Overview
-We are happy to accept contributions to the project in the form of pull requests and reporting issues.  Please use the [GitHub Issues]() tool to submit bugs or request new features.  
+We are happy to accept contributions to the project in the form of pull requests and reporting issues.  Please use the [GitHub Issues](https://github.com/lmco/streamflow/issues) tool to submit bugs or request new features.  
 
 For any bugs, please include as much detail as possible in your tickets including your operating system, Java version, StreamFlow version, and any other environmental details you think necessary to recreate the issue.  Even better, if you would like to contribute a fix for your issue or new feature please submit a pull request for review by the development team.
 
