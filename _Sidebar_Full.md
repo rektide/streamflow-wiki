@@ -4,7 +4,6 @@
   * [Building the Project](Getting-Started#building-the-project)
   * [Installation](Getting-Started#installation)
   * [Startup](Getting-Started#startup)
-  * [Logstash Configuration](Getting-Started#logstash-configuration-optional)
 * [Configuration](Configuration)
   * [Server Configuration](Configuration#server-configuration)
   * [Proxy Configuration](Configuration#proxy-configuration)
