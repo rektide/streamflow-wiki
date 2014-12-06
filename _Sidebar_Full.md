@@ -4,6 +4,7 @@
   * [Building the Project](Getting-Started#building-the-project)
   * [Installation](Getting-Started#installation)
   * [Startup](Getting-Started#startup)
+  * [Upgrades](Getting-Started#upgrades)
 * [Configuration](Configuration)
   * [Server Configuration](Configuration#server-configuration)
   * [Proxy Configuration](Configuration#proxy-configuration)
