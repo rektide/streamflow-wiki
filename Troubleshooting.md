@@ -1,4 +1,4 @@
-We provide a variety of options that allow our users and contributors to easily get in contact with us regarding suggestions, bugs, and general questions.  Feel free to use whichever media you prefer and don't hesitate to get in contact with us if you need help along the way.
+We provide a variety of options that allow our users and contributors to easily get in contact with us regarding bugs, feature requests, and general questions.  Feel free to use whichever media you prefer and don't hesitate to get in contact with us if you need help along the way.
 
 ### Google Group
 
@@ -8,7 +8,7 @@ The StreamFlow Google Group is the best way to help get your questions answered 
 
 ### GitHub
 
-[GitHub StreamFlow Issues]()
+[GitHub StreamFlow Issues](https://github.com/lmco/streamflow/issues)
 
 GitHub issues is the best place to go when you have identified a bug or problem in the StreamFlow source code.  This will allow us to track each bug independently and potentially assign them to a user for completion.  We will also add tickets for any major enhancements we plan to complete for the next release.  This is a good way to outline our development goals for the next release and begin assigning them to developers.  If you see a feature that calls out to you, feel free to fork our repository and give us a hand.  During this development process, we encourage our contributors to use comments to outline approaches to the problem and summarize your progress along the way.
 
