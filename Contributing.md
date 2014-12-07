@@ -16,19 +16,19 @@ StreamFlow uses the [GitFlow](http://nvie.com/posts/a-successful-git-branching-m
 In compliance with the GitFlow model, we have a master branch, a develop branch, and various feature, hotfix, and release branches.   
 
 #### Master Branch
-The `master` branch should contain the most stable release code and would be the best place to pull code if deploying to a production environment.  The `master` branch should **NEVER** be committed to directly and should only receive updates during the release process.
+The `master` branch should contain the most stable release code and would be the best place to pull code if deploying to a production environment.  The `master` branch should **NEVER** be committed to directly and should only be updated through the release or hotfix process.
 
 #### Develop Branch
-The `develop` branch is assumed to be stable and contains all of the newest individually tested features.  All features in the develop branch should be tested.  The `develop` branch should **NEVER** be committed to directly and should only receive updates from merged feature branches.
+The `develop` branch is assumed to be stable and contains all of the newest individually tested features.  All features in the develop branch should be tested.  The `develop` branch should **NEVER** be committed to directly and should only be updated through merged feature branches.
 
 #### Feature Branches
 Feature branches should always be forked from the develop branch and should contain enhancements which are targeted for the next release.  All contributors looking to submit new features should do so in a feature branch.  Feature branches use the naming convention of `feature/my-new-feature` where you would replace `my-new-feature` with a short but descriptive name for your branch.  When you have completed testing of your new feature, please submit a new pull request with your feature branch as the source and the `develop` branch as the target.
 
 #### Release Branches
-Release branches support the preparation of a new production release.  The release branch should be created once all features planned for the release have been merged back into the `develop` branch.  Final testing and verification can be performed on the release branch while developers looking to push new features can do so in the `develop` branch independent of the release.  Release branches use the naming convention of `release/0.9.0` where `0.9.0` represents the target version of the new release.
+Release branches support the preparation of a new production release.  The release branch should be created once all features planned for the release have been merged back into the `develop` branch.  Final testing and verification can be performed on the release branch while contributors can continue working on new features in the `develop` branch.  Release branches use the naming convention of `release/0.9.0` where `0.9.0` represents the target version of the new release.
 
 #### Hotfix Branches
-Hotfix branches are branches used to prepare for a new release which fixes any bugs from a previous release.  The hotfix branches should branch off of `master` and changes should be merged back into both `master` and `develop` when complete.  Multiple bugs can be addressed in a single hotfix branch and when complete should increment the patch component of the release version.  Hotfix branches use the naming convention of `hotfix/0.9.1` where `0.9.1` represents the target version of the new release.
+Hotfix branches are branches used to prepare for a new release which fixes any bugs from an existing release.  The hotfix branches should branch off of `master` and changes should be merged back into both `master` and `develop` when complete.  Multiple bugs can be addressed in a single hotfix branch and when complete should increment the patch component of the release version.  Hotfix branches use the naming convention of `hotfix/0.9.1` where `0.9.1` represents the target version of the new release.
 
 
 ## Using the JGit-Flow Plugin to Create Branches
@@ -36,7 +36,7 @@ The [Atlassian JGit-Flow Maven plugin](https://bitbucket.org/atlassian/jgit-flow
 
 > **Note:** Use of the Maven plugin is not required and if you prefer to using traditional Git commands to create your feature branches, please feel free to do so.  Just make sure you follow the naming conventions referenced in the above Branching Model section. 
 
-If you would like to use the Maven plugin, execute the following commands from within the root folder of the StreamFlow source code.  Each command will prompt you for the name of your feature, release, or hotfix branch so enter the desired name for your branch when prompted.
+If you would like to use the Maven plugin, execute the following commands from within the root folder of the StreamFlow source code.  Each command will prompt you for the name of your feature, release, or hotfix branch so enter the desired name for your branch when prompted.  The Maven plugin will also help you adhere to the naming convention for each branch type as listed above.
 
 #### Creating a Feature Branch
 
