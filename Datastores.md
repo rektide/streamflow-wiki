@@ -66,22 +66,7 @@ datastore:
     # MongoDB Datastore specific properties
     host: localhost
     port: 27017
-    acceptableLatencyDifference: 
-    connectTimeout:
-    connectionsPerHost:
-    cursorFinalizerEnabled:
-    heartbeatConnectRetryFrequency:
-    heartbeatConnectTimeout:
-    heartbeatFrequency:
-    heartbeatSocketTimeout:
-    heartbeatThreadCount:
-    maxConnectionIdleTime:
-    maxConnectionLifeTime:
-    maxWaitTime:
-    minConnectionsPerHost:
-    socketKeepAlive:
-    socketTimeout:
-    threadsAllowedToBlockForConnectionMultiplier:
+    
 ```
 
 ##### `moduleClass`
@@ -93,7 +78,7 @@ datastore:
 - **Default:** localhost
 
 ##### `port`
-- **Description:** The port of the MongoDB server
+- **Description:** The port of the MongoDB server. If your MongoDB server is using the default port settings the the proper value is most likely 27017.
 - **Default:** 27017
 
 
