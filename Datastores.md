@@ -4,7 +4,7 @@ Datastores are used to persist all user created entities and are required when r
 
 All configuration for a Datastore is set in the `datastore` section of the `streamflow.yml` configuration file.  The only required property in the `datastore` section is the `moduleClass` which specifies the fully qualified class name of the datastore module class.  Each Datastore must implement a Guice module which initializes any required dependencies and provides an implementation for each of the StreamFlow Core DAOs.
 
-Each Datastore can expose a set of custom properties in the `datastore` section of the configuration file which are passed to the datastore implementation at runtime.  These properties are used to configure things in the datastore such as the JDBC URL or MongoDB URL.
+Each Datastore can expose a set of custom properties in the `datastore` section of the configuration file which are passed to the datastore implementation at runtime.  These properties are used to configure things in the datastore such as the JDBC URL or MongoDB URL.  In each case, if the datastore specific property is not explicitly declared, the defaults listed below will be used.
 
 StreamFlow comes prebuilt with support for JDBC databases and MongoDB databases.  If either of these databases does not suit your needs, you can always implement your own Datastore to integrate with another storage solution.  This section will cover the JDBC datastore, MongoDB datastore, and the procedure to implement a custom datastore to supplement the existing capabilities.  In each section, the properties that are unique to each Datastore will be covered in detail and a example configuration will be provided.
 
@@ -53,4 +53,50 @@ datastore:
 
 ## MongoDB Datastore
 
+TODO
+
+The following sample datastore section of the `streamflow.yml` configuration file outlines each of the MongoDB datastore properties:
+
+```
+# Datastore configuration
+datastore:
+    # Datastore module class
+    moduleClass: streamflow.datastore.mongodb.config.MongoDatastoreModule
+
+    # MongoDB Datastore specific properties
+    host: localhost
+    port: 27017
+    acceptableLatencyDifference: 
+    connectTimeout:
+    connectionsPerHost:
+    cursorFinalizerEnabled:
+    heartbeatConnectRetryFrequency:
+    heartbeatConnectTimeout:
+    heartbeatFrequency:
+    heartbeatSocketTimeout:
+    heartbeatThreadCount:
+    maxConnectionIdleTime:
+    maxConnectionLifeTime:
+    maxWaitTime:
+    minConnectionsPerHost:
+    socketKeepAlive:
+    socketTimeout:
+    threadsAllowedToBlockForConnectionMultiplier:
+```
+
+##### `moduleClass`
+- **Description:** The moduleClass for the MongoDB datastore.  To use the MongoDB datastore, this property must be `streamflow.datastore.mongodb.config.MongoDatastoreModule`
+- **Default:** streamflow.datastore.mongodb.config.MongoDatastoreModule
+
+##### `host`
+- **Description:** The hostname of the MongoDB server
+- **Default:** localhost
+
+##### `port`
+- **Description:** The port of the MongoDB server
+- **Default:** 27017
+
+
 ## Building a Custom Datastore
+
+*Coming soon...*
