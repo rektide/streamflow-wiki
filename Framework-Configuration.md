@@ -73,3 +73,83 @@ serializations:
 
 #### Sample framework.json
 
+```
+{
+    "name": "sample-framework",
+    "label": "Sample Framework",
+    "version": "1.0.0-SNAPSHOT",
+    "description": "Spouts and Bolts implemented for demonstration purposes",
+    "components": [
+        {
+            "name": "sample-bolt",
+            "label": "Sample Bolt",
+            "type": "storm-bolt",
+            "description": "Sample bolt used for demonstration purposes",
+            "mainClass": "streamflow.bolt.SampleBolt",
+            "properties": [
+                {
+                    "name": "field-one",
+                    "label": "Field One",
+                    "description": "Description of field one",
+                    "defaultValue": "10",
+                    "required": true,
+                    "type": "number"
+                },
+                {
+                    "name": "field-two",
+                    "label": "Field Two",
+                    "description": "Description of field two",
+                    "defaultValue": "second",
+                    "required": false,
+                    "type": "select",
+                    "options": {
+                        "listItems": [
+                            "first",
+                            "second",
+                            "third"
+                        ]
+                    }
+                }
+            ],
+            "inputs": [
+                {
+                    "key": "default",
+                    "description": "Takes any tuple as input"
+                }
+            ],
+            "outputs": [
+                {
+                    "key": "default",
+                    "description": "Processed activity content"
+                }
+            ]
+        }
+    ],    
+    "resources": [
+        {
+            "name": "file-resource",
+            "label": "File Resource",
+            "description": "File Resource for Testing",
+            "resourceClass": "streamflow.resource.FileResource",
+            "properties": [
+                {
+                    "name": "file-resource",
+                    "label": "File Resource",
+                    "description": "Use this resource to upload and save files",
+                    "defaultValue": "",
+                    "required": true,
+                    "type": "file"
+                }
+            ]
+        }
+    ],
+    "serializations": [
+        {
+            "typeClass": "streamflow.serializer.SampleType",
+            "serializerClass": "streamflow.serializer.SampleTypeSerializer"
+        }
+    ]
+}
+```
+
+
