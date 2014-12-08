@@ -6,7 +6,7 @@ In the previous section you set up a Maven project capable of compiling a Stream
 
 The framework configuration file is used to register all of the Spouts, Bolts, Resources, and Serializations that are present within the framework jar project.  This configuration can be defined using a YAML format or a JSON format.  Selection of the configuration format (YAML/JSON) is solely a personal preference as all settings are available in each format.  Although either format can be used, YAML is the recommended format as it is less verbose than JSON when formatting the configuration file.  
 
-The `framework.yml` and `framework.json` configuration files must be located in a `STREAMFLOW-INF` folder at the root of the class path (e.g. `src/main/resources/STREAMFLOW-INF/framework.yml` or `src/main/resources/STREAMFLOW-INF/framework.json`).  The following sample `framework.yml` and `framework.json` files outline the format of these configuration files.  
+The `framework.yml` and `framework.json` configuration files must be located in a `STREAMFLOW-INF` folder at the root of the class path (e.g. `src/main/resources/STREAMFLOW-INF/framework.yml` or `src/main/resources/STREAMFLOW-INF/framework.json`).  The following sample `framework.yml` and `framework.json` files outline the format of these configuration files.  Following the examples, each major section of the configuration will be covered in detail.
 
 > **Note:** The following YAML and JSON configurations are equivalent and you should only define either `framework.yml` OR `framework.json` in your project.
 
@@ -151,5 +151,6 @@ serializations:
     ]
 }
 ```
+
 
 
