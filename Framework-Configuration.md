@@ -150,7 +150,7 @@ serializations:
 }
 ```
 
-## Framework Properties
+## General Configuration
 Framework properties define general information about a framework that is used to identify the framework. These properties are typically listed at the top of the framework configuration for clarity, although it can be located anywhere in the configuration.  
 
 Let's look at a snippet of the framework properties from the above example and walk through each property in detail.
@@ -162,6 +162,27 @@ version: 1.0.0-SNAPSHOT
 description: Spouts and Bolts implemented for demonstration purposes
 ```
 
-##### `name`
-- **Details:** The name is the globally unique identifier for the framework.  You must ensure that no other frameworks use the same name, otherwise you the two frameworks will collide during framework upload.  To help protect against this, it is common to prefix your framework name with namespace style information (e.g. `streamflow.core.sample.framework`)
+#### `name`
+- **Description:** The name is the globally unique identifier for the framework.  You must ensure that no other frameworks use the same name, otherwise you the two frameworks will collide during framework upload.  To help protect against this, it is common to prefix your framework name with namespace style information (e.g. `streamflow.core.sample.framework`)
 - **Default:** *None*
+
+#### `label`
+- **Description:** The label is the user friendly name that user's will see in the UI to identify your framework.
+- **Default:** *None*
+
+#### `version`
+- **Description:** The version helps identify the version number of your framework to users.  Although you are free to enter any value for this field, we recommend incrementing your version using Semantic Versioning.
+- **Default:** *None*
+
+#### `description`
+- **Description:** Helps users understand the purpose of your framework
+- **Default:** *None*
+
+
+## Component Configuration
+
+## Property Configuration
+
+## Resource Configuration
+
+## Serialization Configuration
