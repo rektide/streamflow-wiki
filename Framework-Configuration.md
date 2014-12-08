@@ -180,6 +180,13 @@ description: Spouts and Bolts implemented for demonstration purposes
 
 
 ## Component Configuration
+The `components` section of the configuration is used to register Storm Spouts and Bolts in the framework.  The `components` property is an array which can be used to register multiple components in the configuration.  The components that are registered in this section will appear in the palette of the topology editor when the framework is uploaded to the StreamFlow server.
+
+Let's look at a snippet of the components section from the above example and walk through each property in detail.
+
+```
+
+```
 
 ## Property Configuration
 
