@@ -1,5 +1,3 @@
-### Overview
-
 In the previous section you set up a Maven project capable of compiling a StreamFlow Framework JAR.  In order to identify the Spouts and Bolts that are available in your Framework JAR, StreamFlow utilizes a single Framework configuration file.  The framework configuration is integral to building Components that can be used within the StreamFlow UI to dynamically build topologies.  Although the project you created in the last section will compile, the lack of a `framework.yml` configuration file will prevent StreamFlow from registering any Spouts or Bolts within your JAR.  
 
 > **Important:** Even though you provide the source code in your framework project, Spouts and Bolts which have not been registered in the `framework.yml` will not be visible by the StreamFlow UI.
@@ -10,7 +8,7 @@ The `framework.yml` and `framework.json` configuration files must be located in 
 
 > **Note:** The following YAML and JSON configurations are equivalent and you should only define either `framework.yml` OR `framework.json` in your project.
 
-#### Sample framework.yml
+### Sample framework.yml
 
 ```
 # Framework Properties
@@ -71,7 +69,7 @@ serializations:
     serializerClass: streamflow.serializer.SampleTypeSerializer
 ```
 
-#### Sample framework.json
+### Sample framework.json
 
 ```
 {
@@ -152,5 +150,18 @@ serializations:
 }
 ```
 
+## Framework Properties
+Framework properties define general information about a framework that is used to identify the framework. These properties are typically listed at the top of the framework configuration for clarity, although it can be located anywhere in the configuration.  
 
+Let's look at a snippet of the framework properties from the above example and walk through each property in detail.
 
+```
+name: sample-framework
+label: Sample Framework
+version: 1.0.0-SNAPSHOT
+description: Spouts and Bolts implemented for demonstration purposes
+```
+
+##### `name`
+- **Details:** The name is the globally unique identifier for the framework.  You must ensure that no other frameworks use the same name, otherwise you the two frameworks will collide during framework upload.  To help protect against this, it is common to prefix your framework name with namespace style information (e.g. `streamflow.core.sample.framework`)
+- **Default:** *None*
