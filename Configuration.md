@@ -54,7 +54,7 @@ The sample `streamflow.yml` configuration below outlines the default configurati
 
 The `server` configuration section is used to configure HTTP server settings.
 
-##### `server.port`
+#### `server.port`
 - **Description:** HTTP port to bind the StreamFlow server to.  This setting will determine where you need to point your browser to access the StreamFlow UI and REST services. 
 - **Default:** 8080
 
@@ -63,11 +63,11 @@ The `server` configuration section is used to configure HTTP server settings.
 
 The `proxy` configuration section is used to configure HTTP proxy settings if required in your environment.  The HTTP proxy settings are made available to Spouts and Bolts via injection if needed.
 
-##### `proxy.host`
+#### `proxy.host`
 - **Description:** (Optional) HTTP proxy host for your environment 
 - **Default:** *None*
 
-##### `proxy.port`
+#### `proxy.port`
 - **Description:** (Optional) HTTP proxy port for your environment 
 - **Default:** *None*
 
@@ -78,15 +78,15 @@ The `auth` configuration is used to configure HTTP authentication/authorization 
 
 > **Warning:** Before enabling authentication, start up StreamFlow and browse to the StreamFlow UI accounts page `http://{STREAMFLOW_SERVER}:{STREAMFLOW_PORT}/#/users` to create some users while authentication is disabled.
 
-##### `auth.enabled`
+#### `auth.enabled`
 - **Description:** "true" if authentication is enabled, "false" otherwise. 
 - **Default:** false
 
-##### `auth.realmClass`
+#### `auth.realmClass`
 - **Description:** (Optional) Specifies the fully qualified class name of the Shiro authorizing realm.  This property should be changed in conjunction with the `auth.moduleClass` property to fit your configuration.  This should only be changed if you plan to change the default Shiro authentication to use another method such as LDAP.
 - **Default:** streamflow.server.security.DatastoreRealm
 
-##### `auth.moduleClass`
+#### `auth.moduleClass`
 - **Description:** (Optional) Specifies the fully qualified class name of the Guice module that supports injection of your `auth.realmClass`.  This property should be changed in conjunction with the `auth.realmClass` property to fit your configuration.  This should only be changed if you plan to change the default Shiro authentication to use another method such as LDAP.
 - **Default:** streamflow.server.security.DatastoreRealmModule
 
@@ -97,25 +97,25 @@ The `datastore` configuration is used to configure the active [Datastore](Datast
 
 > **Note:** Each Datastore implementation allows for custom properties which affect its behavior.  Consult the documentation for each Datastore to see which additional properties are available.
 
-##### `datastore.moduleClass`
+#### `datastore.moduleClass`
 - **Description:** The fully qualified class name of the Guice module supporting the Datastore implementation. Each datastore implementation must implement an AbstractModule capable of loading any datastore dependencies.
 - **Default:** streamflow.datastore.jdbc.config.JDBCDatastoreModule
 
 > The following settings are specific to the default JDBC Datastore which utilizes an embedded H2 database.  If you would like to use a standalone database, override these settings to match your database.
 
-##### `datastore.url`
+#### `datastore.url`
 - **Description:** JDBC URL of the target database 
 - **Default:** jdbc:h2:${STREAMFLOW_HOME}/data/h2/streamflow
 
-##### `datastore.driver`
+#### `datastore.driver`
 - **Description:** JDBC driver for the target database 
 - **Default:** org.h2.Driver
 
-##### `datastore.user`
+#### `datastore.user`
 - **Description:** JDBC username for the target database 
 - **Default:** streamflow
 
-##### `datastore.password`
+#### `datastore.password`
 - **Description:** JDBC password for the target database 
 - **Default:** streamflow
 
@@ -126,15 +126,15 @@ The logging configuration is used to configure the location and configuration of
 
 Note: Changes made in this section should also be reflected in the Logstash agent configurations if Logstash is being used.
 
-##### `logger.level`
+#### `logger.level`
 - **Description:** Logging level to use when outputting data
 - **Default:** INFO
 
-##### `logger.baseDir`
+#### `logger.baseDir`
 - **Description:** Base directory to publish log data to.  This directory must already exist on the server and have write permission by the StreamFlow server 
 - **Default:** /var/log/storm
 
-##### `logger.formatPattern`
+#### `logger.formatPattern`
 - **Description:** SLF4J log pattern to use when outputting topology log data 
 - **Default:** "%d{ISO8601,GMT} %p %X{topology} %X{component} %c - %m%n"
 
@@ -145,26 +145,26 @@ The `clusters` configuration allows users to register Storm clusters with Stream
 
 > Note: Regardless of the configuration, the embedded "Local" cluster is always available for testing.  This cluster allows users to submit and test topologies without requiring an available Storm cluster.  This takes advantage of Storm's LocalCluster capability which does not require a Storm installation and is only recommended for testing purposes.
 
-##### `clusters.id`
+#### `clusters.id`
 - **Description:** Unique id to assign to this cluster
 - **Default:** *None*
 
-##### `clusters.displayName`
+#### `clusters.displayName`
 - **Description:** User friendly name that will appear when selecting a cluster
 - **Default:** *None*
 
-##### `clusters.nimbusHost`
+#### `clusters.nimbusHost`
 - **Description:** Hostname of the nimbus machine for the Storm cluster
 - **Default:** localhost
 
-##### `clusters.nimbusPort`
+#### `clusters.nimbusPort`
 - **Description:** Thrift port of the nimbus machine for the Storm cluster
 - **Default:** 6627
 
-##### `clusters.logServerHost`
+#### `clusters.logServerHost`
 - **Description:** (Optional) Hostname of the Logstash Elasticsearch server
 - **Default:** localhost
 
-##### `clusters.logServerPort`
+#### `clusters.logServerPort`
 - **Description:** (Optional) HTTP port of the Logstash Elasticsearch server
 - **Default:** 9200
