@@ -118,8 +118,3 @@ The StreamFlow distribution when unpacked contains some directories which store 
 * `${STREAMFLOW_HOME}/conf` - Contains `streamflow.yml` configuration settings for the server
 
 When upgrading your `streamflow.yml` always remember to check the upgrade notes to see if any configuration properties have been added or deprecated.  Please adjust your streamflow.yml as necessary to remain valid with new distributions.
-
-
-## Logstash Configuration (optional)
-
-Coming soon...
