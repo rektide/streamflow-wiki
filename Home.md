@@ -1,6 +1,8 @@
 Welcome to the StreamFlow open source project!
 
-StreamFlow&trade; is a stream processing tool designed to rapidly build and monitor processing workflows.  The ultimate goal of StreamFlow is to make working with stream processing frameworks such as Apache Storm easier, faster, and with "enterprise" like management functionality.  StreamFlow provides a graphical user interface for non-developers such as data scientists, analysts, or operational users to rapidly build scalable data flows and analytics.  The following image is a screenshot of this topology builder. 
+StreamFlow&trade; is a stream processing tool designed to rapidly build and monitor processing workflows.  The ultimate goal of StreamFlow is to make working with stream processing frameworks such as Apache Storm easier, faster, and with "enterprise" like management functionality.  
+
+StreamFlow provides a graphical user interface for non-developers such as data scientists, analysts, or operational users to rapidly build scalable data flows and analytics.  The following image is a screenshot of this topology builder. 
 
 [[https://raw.githubusercontent.com/wiki/lmco/streamflow/sample-topology.png]]
 
